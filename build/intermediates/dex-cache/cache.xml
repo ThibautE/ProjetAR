@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/9f217e887ea22eea3e6a29e8308f02ed475ba573/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9d1d0e1270310e34e2d65afda2bc18605c14cd46">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1f82ad528d710b2eacf4b2c468a6af310349770e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/1eb9c0cb035b7cd5cbfb05ff14d8b8e107235a50/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab0c7fe28f9506302eb39adf1ebf5858732e18ec">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d6f994817347bb81fa993e21212dc1cb213a2046/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/6ebd09e2232b1944c6b145061da437ade0d99a66/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c81ed48f0719ba5eb18c04df2594ba0959524a3f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/ddfe82edc989f000d5731da2e4ab028d15e183e6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_afaa120490e0b9c5b4471f3d302241215eb25a12/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/29e6de2c183adc446c8e658d157bea8c460f00f3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_058b0921deeebda344c6ff5e9262167a0016ec38/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/e0d7819147cdef25ff3d07dd7fc8bd0460e6f00c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="101393e975eaf36e3ff40b277ee9a019e077afef">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4eafb52f2a3fb0c7fc13c306d8817006ad8bd551/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/076a5a74e17bb160728f328f51c986a9d76593c0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_be92605da1540c780fb4f7e06a67186986a8bf8a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/7ab64a220f0abd78ce3361e007addbe6f5c80833/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75575883f0348fc5d2be85f23bd10b050095cf17">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_335e891d4afed7d293fae0c519bde33e014ad599/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/f621b8403d78618ba180721ee030f73ecb409531/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="423fb69e69759d8b726fa4a4fb6a1ea9fc86d1cd">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c36acc7bc0c84054b3d25e3f6921fce45a9f616b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/2b234a3765b9b2cbb9255395f06357cf547d39c0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7157a9577c983651d6c6ee313813424fe2d8ab6">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ade3d36da00ae869edc8fb73feb07f50fa814d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/d8b5ebce4a4eb8179179343d198018be5e1f7ec0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8bc3fd97abb8977eb47ca41e5ad8a297c30a5a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/fa50c27448fb65bed7ce6ba5dd8421dea28e504a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1bab75be1918fc9871be4da7afe38d7e4d308303">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_54247febed3782f4c250cddaa1106bf1136fea92/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/18323abb6be64f03de6e35a1a525b65e43d3be25/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_74fb0e7e241fae17d82fa26a2bb2e23ba82f498c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/a728253610bf9bed1262171f38fbe20cb6844c33/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea03bbfaed89818f233ee9918fac493f2b63895a">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_51e2cc915b193be102a81b363e21d6566d6724f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/2a50ab2e111b432f440b1669d720d0cb23b9c9d6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8ef5d4ca158178d38855a18a1cc7e6f77dd0fffa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/d3947cc21351b9f968fdf95fccbbdf9d538c2272/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="473f2fb9fe4335eb7652a9ad9c666ed0198b24d9">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fe7477b0df312f4027a239f1fa77d74e431d6885/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/2be1bc61638c7bc936f8183b495c033c7ab6d2e5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f57fb6a0f666487ad5c2eb46da9cd6bb65a59c55/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/e5f8aa27984ebd38c9c1c9b11411028eaeec1272/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_610ee4ddbd28dac14e1527fe857c541051abe5e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/c2bedf6e920aabddc6695cc7f0e092e586c659e3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa23e4589287adb431ef59d6c78af79ab8885682">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6bd3a0fbaac8f613bf6d8d124a4a155f55f12620/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/e9798926cca207a21d69b2db9aa0627c9fb75af3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d08bb32b88df3dbcbe1d498c3c57f020b8c521ec">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6d22708f66fbba073e9e3e456dbead7573523052/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/0596a1f64a6a9831792385a7a6392e9f5ee34464/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a83edce7f26dfc75048be8ab8c1b353fe04ee1ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/5b04937be1b185a8ce4fb5628227c0965081ade3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22a5e9c8e375fee1e843c7a0ab1734c7f0ccc0b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/3387e387647c9462df50da125d4aefd328718445/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fd2e9eadc9d214966ee7f60d6c5a17a335d7533">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_db913d6ff13c93c8ccd151167568e82118530e0a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/6cd2735e81198df7e37b4ce93c21fcc99f162f26/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="421a5cebe9ff187c98075c59786e9464c5c67d36">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0819edfbae40ed5a7b4c9e1aac8711065b1ed70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/3db45e45a8b14a536c07ce23f7a1f09a8f58e890/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="444f9de23145e8caba7bf1c1772acad142ea6013">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c77b7ec56eea8c7d22109d0f398ca738810f2d07/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/699d3a6594a393a4e2d0258d47d92997933ec4ff/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0f58195bee8a08f35e7d4ee7fd4b0479e570e172">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5e13bc9a88ff9a061a0be6040a4e150b395ee273/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/6a1e855241921fe8b1419551b37c0f144baeeeb3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8743b8784b85d2593e77812b616b1cb9d880cc11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/2c574fdf34b7fc1d285abb7bcf521658e654188e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9493f008850469ed3fab9b28658919562882aed">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e36b15c6682cf44b699dd3462024e439ec49390/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/4afc81eb8b3a4eb0dd269624a1b7fcc2aa4d8523/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e01b82d664e1a8253b2b9658e74b5da35c8771d">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_aa814bad596589fe14f6b91a1639e954b28fa556/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/b91b32ca655a2639137be05393ec154cfa1b3466/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_77905a8af14f611680088d807a9c47bd9d13be0b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/6f9a8b7365820335a3bdb94bfe04c2ad9935f8c1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1fbf3733f36fea63e70373212796e70f9079981f">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5a8a2712070df0e80cbff7968005bc188d021827/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/0e33f5255806c180a8fd13ff9e573ca55df1d397/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c9961a24677f022bcd6ed85fac090eded97032ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/7485071635284a48ebbd32467b938313083c4613/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cf2079f471180783fa588e6ffce5119dd300e746/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/096a023dd14bbc84863aebaa9ae76fa88e7fa2a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d3e2ab8d0f55c6e7d5c5d50df07b72832260bd55/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/95d87cd398c768342132b4fb4265d9c23869c600/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="646b2c48e147b943f0a39842457fdc66d501e4b6">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_18b75baa6fc269e1638f6b3ce7ed3b94dacacbb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/fc90d137ac91ed781591b29a8dc010e2adceb75b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e2873c0bef4448f20f569cd40fc64ee8cc47c0cf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/c624431b54c96c0c9a3509f56ea010800c523fc6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90270132a5f1a33584f453c571257dd35e728201">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ca95ba5c9f57b0ed0154fba8e2edab5fdba6e19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/e5f6dbc0e51d6870aa0c1df195041cc9c98f8aaf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74c5a91d6510ad42410e8a047d90d2ea6721a0e0">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ae3f0674e2795ae21cf4820ebfe270cdb4e42df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/9f7f8f2bd9fd003edf42340aa01ebae2344780aa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10a8843cc52cf174ea90c5172288b9bc795d092b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/347f3656f2e9e78ec73364b1b5560ce90871ab2a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3aaf1e7b5fe9f4d3ff22c4edc0ead631f7389d30">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_83f8596aed39507afa50cdeece18da2859cf8f09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/a85d82f9afe384468cb936b77b8c4c395ec0ec4f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_290c0085e4c3de4b39952905af8b171f317a3cb1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/f5f44c2b70b726540be950a477f8a46203823b00/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b831d3902674d096189451d46fce219e2c2904b7">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_033a29511c7744c02533724da4fe6232a0f622bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="df8b559ae87d73f59c18014791079b34a6ddd84f">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d4fbfd95d485bc4a70f04cfad560cc9bec14b6f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/f1ba859de3936aad4921a50ad60833540e73bf48/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_775df4d5e41e85443387e8d3302342aeae567290/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/b3a39c61522e23485982c9f9c1219d8337a1a896/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ef2d91da513c4d7e773ae438fe04d0e4c135957">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b4d0776d73ebde2cbab29899b8c66932d1ae71d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/b91b32ca655a2639137be05393ec154cfa1b3466/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_79179796615892898e2bac16c559a500fbb3cedb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/a055047763e58fd63e5bd63347f67c2d10d3a6ba/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="68485f21eeb5d6c9ed82c445d520b9fc81c87108">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8a0dca30cbb1fa95dcbf81de503c6f5020c0a2e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d90bd020743738229b42767ceb9092342c1c9bd1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/a3fad28bbcec1dc8cc7074637497b9ddab818a29/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ddb7fed808f4331174b59428ccfc46b3696c9812">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_030f613a513f9233248d8b98e9da0c333c88b2dd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/e6ed9df6cfd2f5e7c8e383703a673112dbbd8324/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8438c64f9eb581429dc592f7c9b3156a3d071653">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea71643185a3fbe96cf9439a51b8edeb17810057/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/8d51a5d7d6c67ec2a7116fb5b5fb180531fdf399/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84d4fe456e1e11d7aa9766657419585973223f73/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/3407d9381c619a1efa48963c6b25b8461fe8bf5f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48532a016bb0dfbe7970c147ce784598a515406b">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c0e08e2afa597c76fea8eb7198875a44f18ee50/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/f9dcfeccda0a0dd8e6e927ea809113c537ad7c87/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3f4483afd050f3be12db7838422309446a45daa1">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1b49a39e627cdec5ea34641651f8463def9ec1dd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/7d18ae0633c6f2642f9ecf10e45c17ace9c07d9e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5c6296a026640909f511b420c1c540978b6cbf31/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_23ea265d2c34ca10bef2ca5987ae0c09d3d84531/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/cf08baf26c08f2764efd507e2b2e3f112fe87ee7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8d6d3ec9490f916c64cc2dbccb2cfe4aed66051/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/eec627fbd2454afbe32292a45d76c99d037b0570/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d14fe9bd2283b2eb7fcab08458aa0357917e138">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_73ceeb5ee2379a1b333e9c5e3f81f616602b1a0d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/5fa115b36c0cfd3e3535b52d2eb3ff65e3a21582/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a89b61a94373dbf2de73959275f9acee3f732997/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/dc86937c5a95bcf79758f98b971ebfb5bb343819/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db4aca1c1ec60f2c098d3b6c91cedfb7838f83ed">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa728408ba81f4d37804b1f944988ebc47cb4881/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/23b4ec18c172f5585d263d236b7c5f1410d979e7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3f828d3cdfc70149ae206f872818272bf15d6a42/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/46ab5d69853051ce1c536c430be4ac4b6b5c1029/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db48dfabe8ecc46681ceca418d6bd61a5339f818">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68a50eba00e57df85976a2ee72732b53c77c48be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/8494c21df4d3ddcb6f15726e3efa152db2003fed/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f4da9f0849e75d9f1934d97533926f2d8b977810/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/cc407a2b8724c29dd262bf3b8b42368ac2d4ec75/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="654b294d429b56fd18392f2b68ad79954f431f8e">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4daffdffa671d122be0216977a36949cbcef1548/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/.android/build-cache/8dd46c750f7f6c410c2b8e8a59a85901deb8de37/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca82d5800780b1d53f0f9ab43678d8634a34cddc">
+        <dex dex="/home/thibaut/Téléchargements/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_79eeabafb4d921955c503aff7640dea2eebda0cc/classes.dex" />
+    </item>
+
+</items>
