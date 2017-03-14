@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/home/thibaut/ProjetCMI/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/thibaut/.android/build-cache/c9262faa687fd77168f01edd54d4d06fb87476b8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="9e608e5b20a9f8811e33ef83455b307dcb127c31">
-        <dex dex="/home/thibaut/ProjetCMI/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_26030904d4a222e200fc384191471c13c37f08df/classes.dex" />
+        sha1="473f2fb9fe4335eb7652a9ad9c666ed0198b24d9">
+        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ea624057482535ae91c7b2f3ae91da3995caef4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98f28ed2cb66da8e8a195c1ad242b7346c9b2890">
+        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_815e504b1bcf30ed259651d5d9d8f0330a404165/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2f21e8c2ffe06a25fb22f2a077be7fd4ec5843b2/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +36,15 @@
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="/home/thibaut/ProjetCMI/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a26c23cdf6cb803021a41472a920e074406d2ba6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/thibaut/ProjetCMI/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e608e5b20a9f8811e33ef83455b307dcb127c31">
+        <dex dex="/home/thibaut/ProjetCMI/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_26030904d4a222e200fc384191471c13c37f08df/classes.dex" />
     </item>
 
 </items>
