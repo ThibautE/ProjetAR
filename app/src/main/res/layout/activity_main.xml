@@ -8,6 +8,22 @@
 
 
     <com.wikitude.architect.ArchitectView android:id="@+id/architectView"
-        android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Carte"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="Liste"
+            android:textSize="10sp" />
+    </com.wikitude.architect.ArchitectView>
 
 </RelativeLayout>
