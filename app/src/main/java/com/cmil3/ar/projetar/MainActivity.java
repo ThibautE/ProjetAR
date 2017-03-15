@@ -1,6 +1,7 @@
 package com.cmil3.ar.projetar;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -8,6 +9,7 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
 
+import android.support.multidex.MultiDex;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -15,7 +17,7 @@ import android.widget.Toast;
 import com.wikitude.architect.ArchitectStartupConfiguration;
 import com.wikitude.architect.ArchitectView;
 
-public class MainActivity extends AppCompatActivity implements LocationListener {
+public class MainActivity extends AppCompatActivity implements LocationListener{
 
     private ArchitectView architectView;
 
@@ -25,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private double longitude;
     private double altitude;
     private float accuracy;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
