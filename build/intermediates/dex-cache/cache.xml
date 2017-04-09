@@ -3,48 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="/home/thibaut/.android/build-cache/c9262faa687fd77168f01edd54d4d06fb87476b8/output/jars/classes.jar"
+        jar="C:\Users\thibs\.android\build-cache\5d4abbdd8bd0a5d0812d66ff35c6d454858621ba\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f3c809e82395c1ef853abbabc14416ab96b3e7ca\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6d29fb172658a550af930ef32e9884a92f9c7759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\a427e1e2c75595ee3e8f7f39c169ba47a32f7f60\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="473f2fb9fe4335eb7652a9ad9c666ed0198b24d9">
-        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ea624057482535ae91c7b2f3ae91da3995caef4/classes.dex" />
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26a738dd99c2d2d80edb9b938a4eff5c2ddedca5\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="98f28ed2cb66da8e8a195c1ad242b7346c9b2890">
-        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_815e504b1bcf30ed259651d5d9d8f0330a404165/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/home/thibaut/StudioProjects/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2f21e8c2ffe06a25fb22f2a077be7fd4ec5843b2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/thibaut/ProjetCMI/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/home/thibaut/ProjetCMI/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a26c23cdf6cb803021a41472a920e074406d2ba6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/thibaut/ProjetCMI/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9e608e5b20a9f8811e33ef83455b307dcb127c31">
-        <dex dex="/home/thibaut/ProjetCMI/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_26030904d4a222e200fc384191471c13c37f08df/classes.dex" />
+        sha1="65e347b9c2a02831b4241571a0ded11a39daa6c6">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9fcd50c9f312cd29387320ac26e4f667b350aea6\classes.dex" />
     </item>
 
 </items>

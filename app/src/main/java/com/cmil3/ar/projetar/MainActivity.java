@@ -1,15 +1,12 @@
 package com.cmil3.ar.projetar;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
-
-import android.support.multidex.MultiDex;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -49,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         try {
             //this.architectView.load("file:///android_asset/06_Point$Of$Interest_4_Selecting$Pois/index.html");
             //this.architectView.load("file:///android_asset/08_Browsing$Pois_1_Presenting$Details/index.html");
-            this.architectView.load("file:///android_asset/08_Browsing$Pois_2_Adding$Radar/index.html");
+            this.architectView.load("file:///android_asset/08_BrowsingPois_5_NativeDetailScreen/index.html");
             architectView.setLocation(latitude, longitude, altitude, accuracy);
         } catch (Exception e) {
             System.out.println("erreur wikitude chargement asset");
