@@ -1,6 +1,7 @@
 package com.cmil3.ar.projetar;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -9,6 +10,8 @@ import android.location.LocationProvider;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.wikitude.architect.ArchitectStartupConfiguration;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     private LocationManager lm;
 
+    private Button BListe, BCarte;
+
     private double latitude;
     private double longitude;
     private double altitude;
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // démarrage du button listener pour la liste
+        init();
 
         this.architectView = (ArchitectView) this.findViewById(R.id.architectView);
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
@@ -153,4 +161,32 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         String msg = String.format(getResources().getString(R.string.provider_disabled), provider);
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+
+    //Bouton de menu pour la liste et pour la carte
+
+    public void init() {
+        BListe = (Button)findViewById(R.id.button3);
+        BCarte = (Button)findViewById(R.id.button2);
+        BListe.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent liste = new Intent(MainActivity.this, Liste.class);
+
+                startActivity(liste);
+            }
+        });
+
+        BCarte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent carte = new Intent(MainActivity.this, Carte.class);
+
+                startActivity(carte);
+            }
+        });
+    }
+
+
+
+
 }

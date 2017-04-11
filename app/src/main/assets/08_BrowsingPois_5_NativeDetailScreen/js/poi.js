@@ -1,4 +1,5 @@
 var myJsonData = [
+                 {"id":"1","longitude":"3.860783","latitude":"43.633737","description":"","name":"Bat. 1"},
                  {"id":"2","longitude":"3.861753","latitude":"43.634046","description":"","name":"Bat. 2"},
                  {"id":"3","longitude":"3.861351","latitude":"43.633895","description":"","name":"Bat. 3"},
                  {"id":"4","longitude":"3.860846","latitude":"43.633888","description":"","name":"Bat. 4"},
@@ -6,8 +7,17 @@ var myJsonData = [
                  {"id":"6","longitude":"3.863995","latitude":"43.632729","description":"Amphis et Salles de TP","name":"Bat. 6"},
                  {"id":"7","longitude":"3.863484","latitude":"43.631628","description":"Bat.7","name":"Administration"},
                  {"id":"8","longitude":"3.864466","latitude":"43.631409","description":"Lundi-Vendredi : 8h-19h","name":"Bibliothèque Universitaire"},
+                 {"id":"9","longitude":"3.865958","latitude":"43.631049","description":"","name":"Bat. 9"},
+                 {"id":"10","longitude":"3.865765","latitude":"43.631430","description":"","name":"Bat. 10"},
+                 {"id":"11","longitude":"3.865607","latitude":"43.631811","description":"","name":"Bat. 11"},
+                 {"id":"12","longitude":"3.865653","latitude":"43.632291","description":"","name":"Bat. 12"},
+                 {"id":"13","longitude":"3.865431","latitude":"43.632695","description":"","name":"Bat. 13"},
+                 {"id":"14","longitude":"3.865238","latitude":"43.633064","description":"","name":"Bat. 14"},
+                 {"id":"15","longitude":"3.865002","latitude":"43.633413","description":"","name":"Bat. 15"},
+                 {"id":"16","longitude":"3.864787","latitude":"43.633859","description":"","name":"Bat. 16"},
                  {"id":"22","longitude":"3.866890","latitude":"43.632212","description":"Geoscience (CNRS + UM)","name":"Bat. 22"},
                  {"id":"29","longitude":"3.861590","latitude":"43.632426","description":"Institut d'Administration des Entreprises","name":"IAE"},
                  {"id":"31","longitude":"3.862454","latitude":"43.632731","description":"","name":"Polytech"},
+                 {"id":"34","longitude":"3.860770","latitude":"43.632019","description":"Maison Des Étudiants","name":"MDE"},
                  {"id":"38","longitude":"3.863382","latitude":"43.633077","description":"Cafétéria du campus","name":"(S)pace"},
                  ];
