@@ -5,4 +5,6 @@
     <string name="provider_new_status">The provider %1$s has now a new status %2$s</string>
     <string name="new_location">New Location : Latitude = %1$f, Longitude = %2$f, Altitude = %3$f avec une précision de %4$f mètres</string>
     <string name="title_activity_carte">Map</string>
+    <string name="carte">Carte</string>
+    <string name="liste">Liste</string>
 </resources>
