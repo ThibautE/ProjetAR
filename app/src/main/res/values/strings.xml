@@ -7,4 +7,5 @@
     <string name="title_activity_carte">Map</string>
     <string name="carte">Carte</string>
     <string name="liste">Liste</string>
+    <string name="Retour">Retour </string>
 </resources>

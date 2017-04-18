@@ -8,10 +8,8 @@ import android.widget.Button;
 
 public class Liste extends AppCompatActivity {
 
-    private Button back;
-
-    public void init(){
-        back = (Button)findViewById(R.id.backButton);
+    private void init(){
+        Button back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,11 +20,20 @@ public class Liste extends AppCompatActivity {
         });
     }
 
+    public void afficherPOI(){
+        for (int i = 0; i < 20; i++){
+            System.out.println("Test");
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste);
 
         init();
+        afficherPOI();
     }
+
+
 }

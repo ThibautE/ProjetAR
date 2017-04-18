@@ -10,11 +10,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Carte extends FragmentActivity implements OnMapReadyCallback {
-
-    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +35,15 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        GoogleMap mMap = googleMap;
 
         // Marqueur sur la faculté des sciences
-        LatLng fds = new LatLng(43.631419, 3.861677);
-        mMap.addMarker(new MarkerOptions().position(fds).title("Faculté des sciences"));
+        LatLng fds = new LatLng(43.632057, 3.864793);
+        //mMap.addMarker(new MarkerOptions().position(fds).title("Faculté des sciences"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(fds));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+        mMap.setMapType(4);
+
 
         // ajout d'un marqueur sur ma position actuelle
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

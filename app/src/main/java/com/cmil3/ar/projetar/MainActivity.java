@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     private LocationManager lm;
 
-    private Button BListe, BCarte;
-
     private double latitude;
     private double longitude;
     private double altitude;
@@ -164,9 +162,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     //Bouton de menu pour la liste et pour la carte
 
-    public void init() {
-        BListe = (Button)findViewById(R.id.button3);
-        BCarte = (Button)findViewById(R.id.button2);
+    private void init() {
+        Button BListe = (Button) findViewById(R.id.button3);
+        Button BCarte = (Button) findViewById(R.id.button2);
         BListe.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

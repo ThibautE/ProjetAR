@@ -9,9 +9,17 @@
     <Button
         android:id="@+id/backButton"
         android:layout_width="381dp"
-        android:layout_height="42dp"
-        android:text="Retour"
+        android:layout_height="48dp"
+        android:text="@string/Retour"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="215dp" />
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ListView
+        android:layout_width="354dp"
+        android:layout_height="456dp"
+        tools:layout_editor_absoluteX="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+
 </android.support.constraint.ConstraintLayout>

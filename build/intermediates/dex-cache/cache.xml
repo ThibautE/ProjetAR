@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_2c0a3ce200c69ab37e639b8dc950dc0447d74142\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\8f98d6c27113af2b34d8755a9700ae31daf14553\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_97da4ac31a9559932c1fc0bd1a8b25a121f178f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\b921f2475844a1f7e0739413dce32b2bb084108c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_33714c8313b10f10b0a3f268f80f808815ba0a0f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\fec10d1359189113ce40c1febfecd0c570ad0b57\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_97bdbcb6f5bc172fcde8ad544061f30e5adf62a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\75a73827ff48fa64138e65a04ffd454f24be7e08\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a8d695dd28442fbafa0c3804b9ae16f2b4f5208e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\f050635fdb4dc8401e89238d51e1dc434db68c1c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0236f92141cc07e7168f460212a0b03b298d8c93\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\0395d5c5497dc6a8dcb08cca6244bf4035eb4e5b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a35a137d91893d965d920232702cc4f1a5ae2be3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6d29fb172658a550af930ef32e9884a92f9c7759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\2ff8947526c25d504a5a6e25c37b9b51ac4a7b20\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_87b2517b22306ac88da8a355405668440094d2ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\8b008b8080104733a2e60f2958a24af91466a52d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5d103b270b3f3b50d8e6b44aa8e068b0de33426">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_da22e35fb329c8c950eb014ae54e7e7da00cd828\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\f928eb90fea9c5060055dbe2fc5e76c6e1ac3a3d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_851f850ba188592aa70a795dfe8c1855a20836e3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f0b395daaadb63e55724eab8f61352075282b858">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9fcd50c9f312cd29387320ac26e4f667b350aea6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thibs\.android\build-cache\a30028910a68d6f006e28f2dcad381d47a2bc597\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="C:\Users\thibs\AndroisStudio\projetAR\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2dad8d48f0740b52210166cf4a97e6863d7be6ab\classes.dex" />
+    </item>
+
+</items>
