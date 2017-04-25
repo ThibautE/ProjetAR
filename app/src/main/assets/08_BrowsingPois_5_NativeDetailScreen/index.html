@@ -44,8 +44,8 @@
 
             <!-- header of UI holding feature buttons -->
             <div id ="header-status" data-role="header" data-position="fixed" data-theme="c">
-                <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true">Range</a>
-                <a href="javascript: World.reloadPlaces()" data-icon="refresh" >Reload</a>
+                <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true">Informations</a>
+                <a href="javascript: World.reloadPlaces()" data-icon="refresh" >Recharger</a>
                 <h1></h1>
             </div>
 
@@ -75,7 +75,7 @@
                 <!-- header with "close" button -->
                 <div data-role="header" data-theme="c">
                     <h1>Details</h1>
-                    <a href="#header" data-rel="close">Close</a>
+                    <a href="#header" data-rel="close">Fermer</a>
                 </div>
 
                 <!-- content of POI detail page, you may also add thumbnails etc. here if you like -->
@@ -89,10 +89,7 @@
 
                     <!-- distance -->
                     <h4>Distance: <a id="poi-detail-distance"></a></h4>
-
-                    <!-- more button-->
-                    <a href="javascript: World.onPoiDetailMoreButtonClicked();" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">More</a>
-                </div>
+                 </div>
             </div>
 
 
@@ -102,15 +99,15 @@
 
                     <!-- header with close button -->
                     <div data-role="header" data-theme="c">
-                        <h1>Range</h1>
-                        <a href="#header" data-rel="close">Close</a>
+                        <h1>Informations</h1>
+                        <a href="#header" data-rel="close">Fermer</a>
                     </div>
 
-                    <!-- distance information, calculated/updated in code  -->
+                    <!-- information sur la distance  -->
                     <div data-role="content">
 
-                        <!-- Range in m/km-->
-                        <h4> Range: <a id="panel-distance-value"></a></h4>
+                        <!-- Distance en m/km-->
+                        <h4> Distance: <a id="panel-distance-value"></a></h4>
 
                         <!-- Amount of visible places -->
                         <h4> Visible: <a id="panel-distance-places"></a></h4>

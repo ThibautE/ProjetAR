@@ -10,6 +10,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
@@ -39,9 +40,22 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
         // Marqueur sur la faculté des sciences
         LatLng fds = new LatLng(43.632057, 3.864793);
-        //mMap.addMarker(new MarkerOptions().position(fds).title("Faculté des sciences"));
+        LatLng bat1_4 = new LatLng(43.633934, 3.861605);
+        LatLng entree = new LatLng(43.631460, 3.861268);
+        LatLng administration = new LatLng(43.631632, 3.863365);
+        LatLng ru = new LatLng(43.631206, 3.860192);
+
+        //ajout des marqueur sur la carte
+        mMap.addMarker(new MarkerOptions().position(bat1_4).title("Batiment 1 à 4"));
+        mMap.addMarker(new MarkerOptions().position(entree).title("Entrée principale"));
+        mMap.addMarker(new MarkerOptions().position(administration).title("Administation"));
+        mMap.addMarker(new MarkerOptions().position(ru).title("Restaurant Universitaire"));
+
+        //déplacement de la caméra sur la carte au niveau de la fds
         mMap.moveCamera(CameraUpdateFactory.newLatLng(fds));
         mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+
+        //choix type carte (4 = satellite avec tracé des routes)
         mMap.setMapType(4);
 
 

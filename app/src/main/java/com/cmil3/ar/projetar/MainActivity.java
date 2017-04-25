@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     private double latitude;
     private double longitude;
-    private double altitude;
+    private double altitude = 0;
     private float accuracy;
 
     @Override
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         setContentView(R.layout.activity_main);
 
         // démarrage du button listener pour la liste
-        init();
+        buttonFonction();
 
         this.architectView = (ArchitectView) this.findViewById(R.id.architectView);
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     public void onLocationChanged(Location location) {
         latitude = location.getLatitude();
         longitude = location.getLongitude();
-        altitude = location.getAltitude();
+        altitude = 0;
         accuracy = location.getAccuracy();
 
         String msg = String.format(
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     //Bouton de menu pour la liste et pour la carte
 
-    private void init() {
+    private void buttonFonction() {
         Button BListe = (Button) findViewById(R.id.button3);
         Button BCarte = (Button) findViewById(R.id.button2);
         BListe.setOnClickListener(new View.OnClickListener(){

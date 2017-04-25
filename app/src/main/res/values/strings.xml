@@ -8,4 +8,6 @@
     <string name="carte">Carte</string>
     <string name="liste">Liste</string>
     <string name="Retour">Retour </string>
+    <string name="ENT">ENT</string>
+    <string name="FDS">FDS</string>
 </resources>
