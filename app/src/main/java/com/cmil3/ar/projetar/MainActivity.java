@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // démarrage du button listener pour la liste
+        // instanciation du button pour la liste et la carte
         buttonFonction();
 
         this.architectView = (ArchitectView) this.findViewById(R.id.architectView);
@@ -57,10 +57,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         } catch (Exception e) {
             System.out.println("erreur wikitude chargement asset");
         }
-
-
     }
-
 
     @Override
     protected void onResume() {
@@ -109,6 +106,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         architectView.onPause();
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                              fonction pour la localisation                                            //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     @Override
     public void onLocationChanged(Location location) {
@@ -121,23 +122,23 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 getResources().getString(R.string.new_location), latitude, longitude, altitude, accuracy);
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
 
-
-        architectView.setLocation(latitude, longitude, altitude, accuracy);
+        architectView.setLocation(latitude, longitude, altitude, accuracy); //mise a jour de la position
 
     }
 
+    //Méthode qui donne l'état de la fonction de localisation (Disponnible, temporairement indisponnible, hors service)
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
         String newStatus = "";
         switch (status) {
             case LocationProvider.OUT_OF_SERVICE:
-                newStatus = "OUT_OF_SERVICE";
+                newStatus = "Hors service";
                 break;
             case LocationProvider.TEMPORARILY_UNAVAILABLE:
-                newStatus = "TEMPORARILY_UNAVAILABLE";
+                newStatus = "Temporairement indisponnible";
                 break;
             case LocationProvider.AVAILABLE:
-                newStatus = "AVAILABLE";
+                newStatus = "Disponnible";
                 break;
         }
         String msg = String.format((getResources().getString(R.string.provider_new_status)), provider, newStatus);
@@ -147,11 +148,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     @Override
     public void onProviderEnabled(String provider) {
-
         String msg = String.format(getResources().getString(R.string.provider_enabled), provider);
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         architectView.setLocation(latitude, longitude, altitude, accuracy);
-
     }
 
     @Override
@@ -161,10 +160,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     }
 
     //Bouton de menu pour la liste et pour la carte
-
     private void buttonFonction() {
-        Button BListe = (Button) findViewById(R.id.button3);
-        Button BCarte = (Button) findViewById(R.id.button2);
+        Button BListe = (Button) findViewById(R.id.button3); //création d'un boutton actif sur le bouton button3 du layout activity_main
+        Button BCarte = (Button) findViewById(R.id.button2); //création d'un boutton actif sur le bouton button4 du layout activity_main
         BListe.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class Liste extends AppCompatActivity {
 
+    //lien vers le site de l'ent
     private void ent(){
         Button ent = (Button) findViewById(R.id.ENT);
         ent.setOnClickListener(new View.OnClickListener() {
@@ -20,6 +21,7 @@ public class Liste extends AppCompatActivity {
         });
     }
 
+    //lien vers le site de la fds
     public void fds(){
         Button fds = (Button) findViewById(R.id.FDS);
         fds.setOnClickListener(new View.OnClickListener() {
@@ -37,8 +39,8 @@ public class Liste extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste);
 
-        fds();
-        ent();
+        fds(); //instanciation du bouton pour la fds
+        ent(); //instanciation du bouton pour l'ent
     }
 
 
