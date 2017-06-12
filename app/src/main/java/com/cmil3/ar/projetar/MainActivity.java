@@ -163,6 +163,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     private void buttonFonction() {
         Button BListe = (Button) findViewById(R.id.button3); //création d'un boutton actif sur le bouton button3 du layout activity_main
         Button BCarte = (Button) findViewById(R.id.button2); //création d'un boutton actif sur le bouton button4 du layout activity_main
+        Button BCalendar = (Button) findViewById(R.id.button4); //création d'un boutton actif sur le bouton button4 du layout activity_main
+
         BListe.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -178,6 +180,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 Intent carte = new Intent(MainActivity.this, Carte.class);
 
                 startActivity(carte);
+            }
+        });
+
+        BCalendar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent calen = new Intent(MainActivity.this, Calendar.class);
+
+                startActivity(calen);
             }
         });
     }
