@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                               fonction de localisation                                            //
+    //                               fonctions de localisation                                            //
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
