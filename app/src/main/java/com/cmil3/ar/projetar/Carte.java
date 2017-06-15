@@ -1,6 +1,7 @@
 package com.cmil3.ar.projetar;
 
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +12,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
@@ -57,6 +60,22 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
         //choix type carte (4 = satellite avec tracé des routes)
         mMap.setMapType(4);
+
+        // Instantiates a new Polyline object and adds points to define campus
+        Polyline campus = mMap.addPolyline(new PolylineOptions()
+                .add(new LatLng(43.628287, 3.868336))
+                .add(new LatLng(43.630572, 3.866346))
+                .add(new LatLng(43.631123, 3.861454))
+                .add(new LatLng(43.635637, 3.859745))
+                .add(new LatLng(43.635905, 3.861323))
+                .add(new LatLng(43.633928, 3.863511))
+                .add(new LatLng(43.634635, 3.866919))
+                .add(new LatLng(43.634670, 3.868000))
+                .add(new LatLng(43.632384, 3.868094))
+                .add(new LatLng(43.629655, 3.869856))
+                .add(new LatLng(43.628287, 3.868336))
+                .color(Color.rgb(53, 122, 183)));
+
 
 
         // ajout d'un marqueur sur ma position actuelle

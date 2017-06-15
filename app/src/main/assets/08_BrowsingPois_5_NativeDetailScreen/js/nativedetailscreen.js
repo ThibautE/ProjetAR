@@ -1,3 +1,11 @@
+// information about server communication. This sample webservice is provided by Wikitude and returns random dummy places near given location
+var ServerInformation = {
+	POIDATA_SERVER: "http://www.lirmm.fr/CampusAR/poiFile.json",
+	POIDATA_SERVER_ARG_LAT: "lat",
+	POIDATA_SERVER_ARG_LON: "lon",
+	POIDATA_SERVER_ARG_NR_POIS: "nrPois"
+};
+
 // implementation of AR-Experience (aka "World")
 var World = {
 
@@ -25,7 +33,7 @@ var World = {
 	updatePlacemarkDistancesEveryXLocationUpdates: 10,
 
 	// called to inject new POI data
-	loadPoisFromLocalData: function loadPoisFromLocalDataFn(poiData) {
+	loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
 
 		// destroys all existing AR-Objects (markers & radar)
 		AR.context.destroyAll();
@@ -49,7 +57,7 @@ var World = {
 				"id": poiData[currentPlaceNr].id,
 				"latitude": parseFloat(poiData[currentPlaceNr].latitude),
 				"longitude": parseFloat(poiData[currentPlaceNr].longitude),
-				"altitude": parseFloat(10),
+				"altitude": parseFloat(poiData[currentPlaceNr].altitude),
 				"title": poiData[currentPlaceNr].name,
 				"description": poiData[currentPlaceNr].description
 			};
@@ -60,7 +68,7 @@ var World = {
 		// updates distance information of all placemarks
 		World.updateDistanceToUserValues();
 
-		World.updateStatusMessage(currentPlaceNr + ' places loaded');
+		World.updateStatusMessage(currentPlaceNr + ' lieux chargés');
 
 		// set distance slider to 100%
 		$("#panel-distance-range").val(100);
@@ -89,6 +97,24 @@ var World = {
 		});
 	},
 
+	/*
+		It may make sense to display POI details in your native style.
+		In this sample a very simple native screen opens when user presses the 'More' button in HTML.
+		This demoes the interaction between JavaScript and native code.
+	*/
+	// user clicked "More" button in POI-detail panel -> fire event to open native screen
+	onPoiDetailMoreButtonClicked: function onPoiDetailMoreButtonClickedFn() {
+		var currentMarker = World.currentMarker;
+		var architectSdkUrl = "architectsdk://markerselected?id=" + encodeURIComponent(currentMarker.poiData.id) + "&title=" + encodeURIComponent(currentMarker.poiData.title) + "&description=" + encodeURIComponent(currentMarker.poiData.description);
+		/*
+			The urlListener of the native project intercepts this call and parses the arguments.
+			This is the only way to pass information from JavaSCript to your native code.
+			Ensure to properly encode and decode arguments.
+			Note: you must use 'document.location = "architectsdk://...' to pass information from JavaScript to native.
+			! This will cause an HTTP error if you didn't register a urlListener in native architectView !
+		*/
+		document.location = architectSdkUrl;
+	},
 
 	// location updates, fired every time you call architectView.setLocation() in native environment
 	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
@@ -104,7 +130,7 @@ var World = {
 
 		// request data if not already present
 		if (!World.initiallyLoadedData) {
-			World.requestDataFromLocal(lat, lon);
+			World.requestDataFromServer(lat, lon);
 			World.initiallyLoadedData = true;
 		} else if (World.locationUpdateCounter === 0) {
 			// update placemark distance information frequently, you max also update distances only every 10m with some more effort
@@ -136,9 +162,9 @@ var World = {
 
 		$(".ui-panel-dismiss").unbind("mousedown");
 
-		//$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
-		//	World.currentMarker.setDeselected(World.currentMarker);
-		//});
+		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
+			World.currentMarker.setDeselected(World.currentMarker);
+		});
 	},
 
 	// screen was clicked but no geo-object was hit
@@ -235,7 +261,7 @@ var World = {
 		} else {
 
 			// no places are visible, because the are not loaded yet
-			World.updateStatusMessage('No places available yet', true);
+			World.updateStatusMessage('Lieux en cours de chargement', true);
 		}
 	},
 
@@ -243,18 +269,40 @@ var World = {
 	reloadPlaces: function reloadPlacesFn() {
 		if (!World.isRequestingData) {
 			if (World.userLocation) {
-				World.requestDataFromLocal(World.userLocation.latitude, World.userLocation.longitude);
+				World.requestDataFromServer(World.userLocation.latitude, World.userLocation.longitude);
 			} else {
-				World.updateStatusMessage('Unknown user-location.', true);
+				World.updateStatusMessage('Position inconnue.', true);
 			}
 		} else {
-			World.updateStatusMessage('Already requesing places...', true);
+			World.updateStatusMessage('Chargement déjà en cours', true);
 		}
 	},
 
 	// request POI data
-	requestDataFromLocal: function requestDataFromLocalFn(lat, lon) {
-		World.loadPoisFromLocalData(myJsonData);
+	requestDataFromServer: function requestDataFromServerFn(lat, lon) {
+
+		// set helper var to avoid requesting places while loading
+		World.isRequestingData = true;
+		World.updateStatusMessage('Chargement des lieux...');
+
+		// server-url to JSON content provider
+		var serverUrl = ServerInformation.POIDATA_SERVER + "?" + ServerInformation.POIDATA_SERVER_ARG_LAT + "=" + lat + "&" + ServerInformation.POIDATA_SERVER_ARG_LON + "=" + lon + "&" + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + "=20";
+
+		var jqxhr = $.getJSON(serverUrl, function(data) {
+				World.loadPoisFromJsonData(data);
+			})
+			.error(function(err) {
+				/*
+					In certain circumstances your web service may not be available or other connection issues can occur.
+					To notify the user about connection problems a status message is updated.
+					In your own implementation you may e.g. use an info popup or similar.
+				*/
+				World.updateStatusMessage("Réponse serveur invalide.", true);
+				World.isRequestingData = false;
+			})
+			.complete(function() {
+				World.isRequestingData = false;
+			});
 	},
 
 	// helper to sort places by distance

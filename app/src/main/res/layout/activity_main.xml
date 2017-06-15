@@ -18,9 +18,9 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_gravity="bottom|right"
-            android:text="@string/liste"
+            android:text="@string/liens"
             android:textSize="14sp"
             tools:ignore="RtlHardcoded" />
 
@@ -35,12 +35,21 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_gravity="bottom|right"
-            android:layout_marginBottom="60dp"
-            android:text="Agenda"
+            android:layout_marginBottom="40dp"
+            android:text="@string/agenda"
             android:textSize="14sp"
             tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:text="@string/addPoi"
+            android:textSize="14sp" />
     </com.wikitude.architect.ArchitectView>
 
 </RelativeLayout>

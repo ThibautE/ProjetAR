@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             this.architectView.load("file:///android_asset/08_BrowsingPois_5_NativeDetailScreen/index.html");
             architectView.setLocation(latitude, longitude, altitude, accuracy);
         } catch (Exception e) {
-            System.out.println("erreur wikitude chargement asset");
+            System.out.println("Erreur du chargement de l'asset Wikitude");
         }
     }
 
@@ -159,11 +159,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
-    //Bouton de menu pour la liste et pour la carte
+    //Instanciation des boutons
     private void buttonFonction() {
         Button BListe = (Button) findViewById(R.id.button3); //création d'un boutton actif sur le bouton button3 du layout activity_main
         Button BCarte = (Button) findViewById(R.id.button2); //création d'un boutton actif sur le bouton button4 du layout activity_main
         Button BCalendar = (Button) findViewById(R.id.button4); //création d'un boutton actif sur le bouton button4 du layout activity_main
+        Button BAddPoi = (Button) findViewById(R.id.button5); //création d'un boutton actif sur le bouton button4 du layout activity_main
+
 
         BListe.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -191,9 +193,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 startActivity(calen);
             }
         });
+
+        BAddPoi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
+                startActivity(addPoi);
+            }
+        });
     }
-
-
-
-
 }
