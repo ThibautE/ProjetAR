@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajoutez une note sur votre position:"
+            android:textSize="10pt">
+        </TextView>
+
+        <EditText
+            android:id="@+id/EditTextName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Nom de la note"
+            android:inputType="textPersonName"></EditText>
+
+        <EditText
+            android:id="@+id/EditTextDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description de la note"
+            android:inputType="textMultiLine"
+            android:lines="5"></EditText>
+
+        <Button
+            android:id="@+id/ButtonCreateNote"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="sendPOI"
+            android:text="@string/createNote"></Button>
+
+    </LinearLayout>
+</ScrollView>
