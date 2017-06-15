@@ -135,10 +135,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 newStatus = "Hors service";
                 break;
             case LocationProvider.TEMPORARILY_UNAVAILABLE:
-                newStatus = "Temporairement indisponnible";
+                newStatus = "Temporairement indisponible";
                 break;
             case LocationProvider.AVAILABLE:
-                newStatus = "Disponnible";
+                newStatus = "Disponible";
                 break;
         }
         String msg = String.format((getResources().getString(R.string.provider_new_status)), provider, newStatus);
