@@ -31,7 +31,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile(name: 'wikitudesdk', ext: 'aar')
-    compile 'com.google.android.gms:play-services:10.2.0'
+    compile 'com.google.android.gms:play-services:11.0.1'
     compile 'com.google.android.gms:play-services-location:10.2.0'
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:multidex:1.0.1'
@@ -46,9 +46,6 @@ dependencies {
     compile('com.google.apis:google-api-services-calendar:v3-rev249-1.22.0') { exclude group: 'org.apache.httpcomponents' }
 
 }
-
-
-
 
 
 repositories {

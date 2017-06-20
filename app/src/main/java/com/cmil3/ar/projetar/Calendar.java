@@ -405,7 +405,7 @@ import pub.devrel.easypermissions.EasyPermissions;
                                 Calendar.REQUEST_AUTHORIZATION);
                     } else {
                         mOutputText.setText("The following error occurred:\n"
-                                + mLastError.getMessage());
+                                + mLastError.getMessage() +mLastError.getCause());
                     }
                 } else {
                     mOutputText.setText("Request cancelled.");

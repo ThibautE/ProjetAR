@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="play-services-wearable-11.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/b3326d96e35d9cc5a02e5662ad70b2447342fd22/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/b3326d96e35d9cc5a02e5662ad70b2447342fd22/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
