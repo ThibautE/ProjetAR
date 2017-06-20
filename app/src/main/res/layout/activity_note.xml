@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="Nom de la note"
-            android:inputType="textPersonName"></EditText>
+            android:inputType="textPersonName"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"></EditText>
 
         <EditText
             android:id="@+id/EditTextDesc"
@@ -32,7 +33,8 @@
             android:layout_height="wrap_content"
             android:hint="Description de la note"
             android:inputType="textMultiLine"
-            android:lines="5"></EditText>
+            android:lines="5"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"></EditText>
 
         <Button
             android:id="@+id/ButtonCreateNote"
@@ -41,6 +43,13 @@
             android:layout_gravity="bottom"
             android:onClick="sendPOI"
             android:text="@string/createNote"></Button>
+
+        <TextView
+            android:id="@+id/TextViewInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="*Certains caratères ne sont pas autorisés et n'apparaitrons pas."
+            ></TextView>
 
     </LinearLayout>
 </ScrollView>

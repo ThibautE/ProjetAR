@@ -15,7 +15,28 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import static java.lang.Double.valueOf;
+
 public class Carte extends FragmentActivity implements OnMapReadyCallback {
+
+
+    //URL to get JSON Array
+    private static String url = "http://www.lirmm.fr/campusar/poiFile.json";
+
+    //array list which will contain all the poi to display on map
+    ArrayList<String[]> poiList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +46,90 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //get poi from http://www.lirmm.fr/campusar/poiFile.json
+        new GetPoi().execute();
     }
+
+
+    /**
+     * Async task class to get json by making HTTP call to http://www.lirmm.fr/campusar/poiFile.json
+     */
+    private class GetPoi extends AsyncTask<Void, Void, Void> {
+
+        ProgressDialog pDialog;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // Showing progress dialog
+            pDialog = new ProgressDialog(Carte.this);
+            pDialog.setMessage("Chargement des lieux...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+
+        }
+
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            HttpHandler sh = new HttpHandler();
+            // Making a request to url http://www.lirmm.fr/campusar/poiFile.json and getting response
+            String jsonStr = sh.makeServiceCall(url);
+
+            if (jsonStr != null) {
+                try {
+                    JSONArray jsonArr = new JSONArray(jsonStr);
+
+                    // looping through all poi
+                    for (int i = 0; i < jsonArr.length(); i++) {
+                        JSONObject c = jsonArr.getJSONObject(i);
+
+                        //create a tab with the poi data
+                        String[] obj={c.getString("name"), c.getString("latitude"), c.getString("longitude"), c.getString("description") };
+                        //store the tab into arrayList
+                        poiList.add(obj);
+
+
+                    }
+                } catch (final JSONException e) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(),
+                                    "Json parsing error: " + e.getMessage(),
+                                    Toast.LENGTH_LONG)
+                                    .show();
+                        }
+                    });
+
+                }
+            } else {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getApplicationContext(),
+                                "Couldn't get json from server. Check LogCat for possible errors!",
+                                Toast.LENGTH_LONG)
+                                .show();
+                    }
+                });
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            // Dismiss the progress dialog
+            if (pDialog.isShowing())
+                pDialog.dismiss();
+        }
+
+    }
+
+
+
 
 
     /**
@@ -41,20 +145,14 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         GoogleMap mMap = googleMap;
 
-        // Marqueur sur la faculté des sciences
-        LatLng fds = new LatLng(43.632057, 3.864793);
-        LatLng bat1_4 = new LatLng(43.633934, 3.861605);
-        LatLng entree = new LatLng(43.631460, 3.861268);
-        LatLng administration = new LatLng(43.631632, 3.863365);
-        LatLng ru = new LatLng(43.631206, 3.860192);
+        //adding poi from the array to the map
+        for(String[] s: poiList){
+            mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
+        }
 
-        //ajout des marqueur sur la carte
-        mMap.addMarker(new MarkerOptions().position(bat1_4).title("Batiment 1 à 4"));
-        mMap.addMarker(new MarkerOptions().position(entree).title("Entrée principale"));
-        mMap.addMarker(new MarkerOptions().position(administration).title("Administation"));
-        mMap.addMarker(new MarkerOptions().position(ru).title("Restaurant Universitaire"));
 
         //déplacement de la caméra sur la carte au niveau de la fds
+        LatLng fds = new LatLng(43.632057, 3.864793);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(fds));
         mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
 
@@ -77,16 +175,8 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                 .color(Color.rgb(53, 122, 183)));
 
 
-
         // ajout d'un marqueur sur ma position actuelle
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         mMap.setMyLocationEnabled(true);

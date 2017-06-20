@@ -60,6 +60,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCU70-0rrfKN16ih4zpW5mH7_TTYcWdoNg" />
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".Carte"
             android:label="@string/title_activity_carte" />

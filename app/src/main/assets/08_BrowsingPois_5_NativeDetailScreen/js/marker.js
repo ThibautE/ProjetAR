@@ -84,7 +84,7 @@ function Marker(poiData) {
         horizontalAnchor: AR.CONST.HORIZONTAL_ANCHOR.CENTER,
         opacity: 0.8,
         style: {
-            fillColor: "#0066ff"
+            fillColor: "#ee6363"
         }
     });
 
