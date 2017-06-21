@@ -14,7 +14,7 @@
             android:id="@+id/TextViewTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Ajoutez une note sur votre position:"
+            android:text="Ajoutez une note de signalement temporaire sur votre position:"
             android:textSize="10pt">
         </TextView>
 

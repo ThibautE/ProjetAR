@@ -9,15 +9,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
+    import android.text.Html;
+    import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,8 +35,10 @@ import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -48,7 +48,6 @@ import pub.devrel.easypermissions.EasyPermissions;
             implements EasyPermissions.PermissionCallbacks {
         GoogleAccountCredential mCredential;
         private TextView mOutputText;
-        private Button mCallApiButton;
         ProgressDialog mProgress;
 
         static final int REQUEST_ACCOUNT_PICKER = 1000;
@@ -56,7 +55,6 @@ import pub.devrel.easypermissions.EasyPermissions;
         static final int REQUEST_GOOGLE_PLAY_SERVICES = 1002;
         static final int REQUEST_PERMISSION_GET_ACCOUNTS = 1003;
 
-        private static final String BUTTON_TEXT = "Call Google Calendar API";
         private static final String PREF_ACCOUNT_NAME = "accountName";
         private static final String[] SCOPES = { CalendarScopes.CALENDAR_READONLY };
 
@@ -81,18 +79,6 @@ import pub.devrel.easypermissions.EasyPermissions;
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
 
-            mCallApiButton = new Button(this);
-            mCallApiButton.setText(BUTTON_TEXT);
-            mCallApiButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mCallApiButton.setEnabled(false);
-                    mOutputText.setText("");
-                    getResultsFromApi();
-                    mCallApiButton.setEnabled(true);
-                }
-            });
-            activityLayout.addView(mCallApiButton);
 
             mOutputText = new TextView(this);
             mOutputText.setLayoutParams(tlp);
@@ -100,11 +86,12 @@ import pub.devrel.easypermissions.EasyPermissions;
             mOutputText.setVerticalScrollBarEnabled(true);
             mOutputText.setMovementMethod(new ScrollingMovementMethod());
             mOutputText.setText(
-                    "Click the \'" + BUTTON_TEXT +"\' button to test the API.");
+                    "Sélectionnez le compte Google associé à votre agenda.");
             activityLayout.addView(mOutputText);
 
+
             mProgress = new ProgressDialog(this);
-            mProgress.setMessage("Calling Google Calendar API ...");
+            mProgress.setMessage("Attente de Google Calendar...");
 
             setContentView(activityLayout);
 
@@ -112,6 +99,8 @@ import pub.devrel.easypermissions.EasyPermissions;
             mCredential = GoogleAccountCredential.usingOAuth2(
                     getApplicationContext(), Arrays.asList(SCOPES))
                     .setBackOff(new ExponentialBackOff());
+
+            getResultsFromApi();
         }
 
         /**
@@ -127,7 +116,7 @@ import pub.devrel.easypermissions.EasyPermissions;
             } else if (mCredential.getSelectedAccountName() == null) {
                 chooseAccount();
             } else if (! isDeviceOnline()) {
-                mOutputText.setText("No network connection available.");
+                mOutputText.setText("Connexion à internet nécessaire.");
             } else {
                 new MakeRequestTask(mCredential).execute();
             }
@@ -162,7 +151,7 @@ import pub.devrel.easypermissions.EasyPermissions;
                 // Request the GET_ACCOUNTS permission via a user dialog
                 EasyPermissions.requestPermissions(
                         this,
-                        "This app needs to access your Google account (via Contacts).",
+                        "L'agenda nécessite l'accès à votre compte Google.",
                         REQUEST_PERMISSION_GET_ACCOUNTS,
                         Manifest.permission.GET_ACCOUNTS);
             }
@@ -185,8 +174,7 @@ import pub.devrel.easypermissions.EasyPermissions;
             switch(requestCode) {
                 case REQUEST_GOOGLE_PLAY_SERVICES:
                     if (resultCode != RESULT_OK) {
-                        mOutputText.setText( "This app requires Google Play Services. Please install " +
-                                        "Google Play Services on your device and relaunch this app.");
+                        mOutputText.setText( "Cette application nécessite l'installation de Google Play. Installez la dernière version de Google Play puis relancez l'application.");
                     } else {
                         getResultsFromApi();
                     }
@@ -362,13 +350,27 @@ import pub.devrel.easypermissions.EasyPermissions;
 
                 for (Event event : items) {
                     DateTime start = event.getStart().getDateTime();
+                    //if event doesn t have start time (all day)
                     if (start == null) {
-                        // All-day events don't have start times, so just use
-                        // the start date.
-                        start = event.getStart().getDate();
+                        start = event.getStart().getDate(); //use start date
                     }
+                    String description = event.getDescription();
+                    //if event doesn t have description
+                    if (description == null) {
+                        description = "";
+                    }
+                    String location = event.getLocation();
+                    //if event doesn t have location
+                    if(location==null){
+                        location = "";
+                    }
+
+                    Date date=new Date(start.getValue());
+                    SimpleDateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm");
+                    String dt = df.format(date);
+
                     eventStrings.add(
-                            String.format("%s (%s)", event.getSummary(), start));
+                            String.format("%s: %s \n%s - %s\n\n", event.getSummary(), description, dt, location));
                 }
                 return eventStrings;
             }
@@ -384,9 +386,9 @@ import pub.devrel.easypermissions.EasyPermissions;
             protected void onPostExecute(List<String> output) {
                 mProgress.hide();
                 if (output == null || output.size() == 0) {
-                    mOutputText.setText("No results returned.");
+                    mOutputText.setText(Html.fromHtml("<b>Aucun évènement à venir.</b>"));
                 } else {
-                    output.add(0, "Data retrieved using the Google Calendar API:");
+                    output.add(0, "VOTRE EMPLOI DU TEMPS:\n");
                     mOutputText.setText(TextUtils.join("\n", output));
                 }
             }
@@ -404,11 +406,12 @@ import pub.devrel.easypermissions.EasyPermissions;
                                 ((UserRecoverableAuthIOException) mLastError).getIntent(),
                                 Calendar.REQUEST_AUTHORIZATION);
                     } else {
-                        mOutputText.setText("The following error occurred:\n"
-                                + mLastError.getMessage() +mLastError.getCause());
+                        mOutputText.setText("L'erreur suivante est survenue:\n"
+                                + mLastError.getMessage() + " "
+                                + mLastError.getCause());
                     }
                 } else {
-                    mOutputText.setText("Request cancelled.");
+                    mOutputText.setText("Requête annulée.");
                 }
             }
         }
