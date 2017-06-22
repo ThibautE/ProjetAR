@@ -297,7 +297,7 @@ var World = {
 					To notify the user about connection problems a status message is updated.
 					In your own implementation you may e.g. use an info popup or similar.
 				*/
-				World.updateStatusMessage("Réponse serveur invalide.", true);
+				World.updateStatusMessage("<center>Connexion au serveur<br> impossible</center>", true);
 				World.isRequestingData = false;
 			})
 			.complete(function() {

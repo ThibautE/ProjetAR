@@ -160,17 +160,21 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
         // Instantiates a new Polyline object and adds points to define campus
         Polyline campus = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(43.628287, 3.868336))
+                .add(new LatLng(43.629593, 3.867466))//premier point extrémité sud-ouest
+                .add(new LatLng(43.630262, 3.867027))// puis rotation sens aiguille de montre
                 .add(new LatLng(43.630572, 3.866346))
-                .add(new LatLng(43.631123, 3.861454))
+                .add(new LatLng(43.631183, 3.862327))
+                .add(new LatLng(43.631123, 3.861454))//rond point / entrée principale
                 .add(new LatLng(43.635637, 3.859745))
                 .add(new LatLng(43.635905, 3.861323))
                 .add(new LatLng(43.633928, 3.863511))
                 .add(new LatLng(43.634635, 3.866919))
                 .add(new LatLng(43.634670, 3.868000))
                 .add(new LatLng(43.632384, 3.868094))
-                .add(new LatLng(43.629655, 3.869856))
-                .add(new LatLng(43.628287, 3.868336))
+                .add(new LatLng(43.629827, 3.869895))
+                .add(new LatLng(43.629309, 3.869798))
+                .add(new LatLng(43.630071, 3.868230))
+                .add(new LatLng(43.629593, 3.867466))
                 .color(Color.rgb(53, 122, 183)));
 
 

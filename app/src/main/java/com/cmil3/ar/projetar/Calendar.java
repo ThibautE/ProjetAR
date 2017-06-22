@@ -9,14 +9,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
+    import android.net.Uri;
+    import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
     import android.text.Html;
     import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
+    import android.view.View;
+    import android.view.ViewGroup;
+    import android.widget.Button;
+    import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -48,6 +51,8 @@ import pub.devrel.easypermissions.EasyPermissions;
             implements EasyPermissions.PermissionCallbacks {
         GoogleAccountCredential mCredential;
         private TextView mOutputText;
+        private Button buttonENT;
+        private Button buttonUM;
         ProgressDialog mProgress;
 
         static final int REQUEST_ACCOUNT_PICKER = 1000;
@@ -92,6 +97,40 @@ import pub.devrel.easypermissions.EasyPermissions;
 
             mProgress = new ProgressDialog(this);
             mProgress.setMessage("Attente de Google Calendar...");
+
+
+            ///////////////////////////ajout de boutons liens vers les sites de l'UM et de l'ENT
+            //ENT
+            buttonENT = new Button(this);
+            buttonENT.setText("ENT");
+            buttonENT.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse("https://ent.umontpellier.fr"));
+                        startActivity(intent);
+                }
+            });
+            activityLayout.addView(buttonENT);
+
+            //UM
+            buttonUM = new Button(this);
+            buttonUM.setText("Université Montpellier");
+            buttonUM.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://www.umontpellier.fr/"));
+                    startActivity(intent);
+                }
+            });
+            activityLayout.addView(buttonUM);
+            /////////////////////////////////////////////////////////////////////////
+
 
             setContentView(activityLayout);
 

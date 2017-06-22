@@ -161,20 +161,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     //Instanciation des boutons
     private void buttonFonction() {
-        Button BListe = (Button) findViewById(R.id.button3); //création d'un boutton actif sur le bouton button3 du layout activity_main
         Button BCarte = (Button) findViewById(R.id.button2); //création d'un boutton actif sur le bouton button4 du layout activity_main
         Button BCalendar = (Button) findViewById(R.id.button4); //création d'un boutton actif sur le bouton button4 du layout activity_main
         Button BAddPoi = (Button) findViewById(R.id.button5); //création d'un boutton actif sur le bouton button4 du layout activity_main
 
-
-        BListe.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent liste = new Intent(MainActivity.this, Liste.class);
-
-                startActivity(liste);
-            }
-        });
 
         BCarte.setOnClickListener(new View.OnClickListener() {
             @Override

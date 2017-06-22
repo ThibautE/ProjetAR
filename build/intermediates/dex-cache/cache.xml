@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e1aba131636a29cd3b1d5fbdf5608822b73ab840">
+        sha1="1a3adc385ef1b4de2b178358647e09e14b0c91ba">
         <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_fa5c8d5bd4e4f687c99ca7797b1f3901ecd68eb6/classes.dex" />
     </item>
     <item

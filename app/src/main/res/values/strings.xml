@@ -6,12 +6,10 @@
     <string name="new_location">Nouvelle position : Latitude = %1$f, Longitude = %2$f, Altitude = %3$f avec une précision de %4$f mètres</string>
     <string name="title_activity_carte">Map</string>
     <string name="carte">Carte</string>
-    <string name="liste">Liens</string>
     <string name="Retour">Retour </string>
     <string name="ENT">ENT</string>
     <string name="FDS">FDS</string>
     <string name="agenda">Agenda</string>
-    <string name="liens">Liens</string>
-    <string name="addPoi">Ajouter note</string>
+    <string name="addPoi">+ Note</string>
     <string name="createNote">Créer ma note</string>
 </resources>
