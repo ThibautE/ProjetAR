@@ -1,7 +1,9 @@
 package com.cmil3.ar.projetar;
 
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -11,12 +13,17 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -144,11 +151,41 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         GoogleMap mMap = googleMap;
 
+
         //adding poi from the array to the map
         for(String[] s: poiList){
             mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
         }
 
+
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker arg0) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                Context mContext = getApplicationContext();
+                LinearLayout info = new LinearLayout(mContext);
+                info.setOrientation(LinearLayout.VERTICAL);
+
+                TextView title = new TextView(mContext);
+                title.setTextColor(Color.BLACK);
+                title.setGravity(Gravity.CENTER);
+                title.setTypeface(null, Typeface.BOLD);
+                title.setText(marker.getTitle());
+
+                TextView snippet = new TextView(mContext);
+                snippet.setTextColor(Color.GRAY);
+                snippet.setText(marker.getSnippet());
+
+                info.addView(title);
+                info.addView(snippet);
+
+                return info;
+            }
+        });
 
         //déplacement de la caméra sur la carte au niveau de la fds
         LatLng fds = new LatLng(43.632057, 3.864793);
@@ -165,8 +202,8 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                 .add(new LatLng(43.630572, 3.866346))
                 .add(new LatLng(43.631183, 3.862327))
                 .add(new LatLng(43.631123, 3.861454))//rond point / entrée principale
-                .add(new LatLng(43.635637, 3.859745))
-                .add(new LatLng(43.635905, 3.861323))
+                .add(new LatLng(43.634281, 3.860092))
+                .add(new LatLng(43.634863, 3.862146))
                 .add(new LatLng(43.633928, 3.863511))
                 .add(new LatLng(43.634635, 3.866919))
                 .add(new LatLng(43.634670, 3.868000))
