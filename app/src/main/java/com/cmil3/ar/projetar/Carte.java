@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -154,7 +155,14 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
         //adding poi from the array to the map
         for(String[] s: poiList){
-            mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
+            if(s[3].indexOf("Note")==0){ // if description begin with "note" i.e communautary POI
+                //display marker with low opacity ( alpha O.8) and a different color (purple)
+                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]).alpha(0.8f).icon(BitmapDescriptorFactory.defaultMarker(225)));
+            } else {
+                //else display marker with default options
+                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
+
+            }
         }
 
 
@@ -201,7 +209,9 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                 .add(new LatLng(43.630262, 3.867027))// puis rotation sens aiguille de montre
                 .add(new LatLng(43.630572, 3.866346))
                 .add(new LatLng(43.631183, 3.862327))
-                .add(new LatLng(43.631123, 3.861454))//rond point / entrée principale
+                .add(new LatLng(43.631010, 3.861528))//rond point / entrée principale
+                .add(new LatLng(43.631908, 3.861019))
+                .add(new LatLng(43.632065, 3.860476))
                 .add(new LatLng(43.634281, 3.860092))
                 .add(new LatLng(43.634863, 3.862146))
                 .add(new LatLng(43.633928, 3.863511))

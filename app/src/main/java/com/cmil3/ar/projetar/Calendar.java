@@ -425,7 +425,7 @@ import pub.devrel.easypermissions.EasyPermissions;
             protected void onPostExecute(List<String> output) {
                 mProgress.hide();
                 if (output == null || output.size() == 0) {
-                    mOutputText.setText(Html.fromHtml("<b>Aucun évènement à venir.</b>"));
+                    mOutputText.setText(Html.fromHtml("<b>Aucun évènement à venir dans votre agenda Google.</b>"));
                 } else {
                     output.add(0, "VOTRE EMPLOI DU TEMPS:\n");
                     mOutputText.setText(TextUtils.join("\n", output));

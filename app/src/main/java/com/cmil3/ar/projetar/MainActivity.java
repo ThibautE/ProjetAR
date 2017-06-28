@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         architectView.onPostCreate();
 
         try {
-            //this.architectView.load("file:///android_asset/06_Point$Of$Interest_4_Selecting$Pois/index.html");
-            //this.architectView.load("file:///android_asset/08_Browsing$Pois_1_Presenting$Details/index.html");
             this.architectView.load("file:///android_asset/08_BrowsingPois_5_NativeDetailScreen/index.html");
             architectView.setLocation(latitude, longitude, altitude, accuracy);
         } catch (Exception e) {
@@ -117,10 +115,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         longitude = location.getLongitude();
         altitude = 0;
         accuracy = location.getAccuracy();
-
-        String msg = String.format(
-                getResources().getString(R.string.new_location), latitude, longitude, altitude, accuracy);
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
 
         architectView.setLocation(latitude, longitude, altitude, accuracy); //mise a jour de la position
 

@@ -1,5 +1,6 @@
 // information about server communication. This sample webservice is provided by Wikitude and returns random dummy places near given location
 var ServerInformation = {
+    //if you want to change database you need to change it in index.php and add.php hosted on LIRMM servers
 	POIDATA_SERVER: "http://www.lirmm.fr/CampusAR/poiFile.json",
 	POIDATA_SERVER_ARG_LAT: "lat",
 	POIDATA_SERVER_ARG_LON: "lon",

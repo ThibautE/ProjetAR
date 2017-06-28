@@ -48,7 +48,7 @@
             android:id="@+id/TextViewInfo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="*Certains caratères ne sont pas autorisés et n'apparaitrons pas."
+            android:text="*Certains caractères ne sont pas autorisés et n'apparaitrons pas."
             ></TextView>
 
     </LinearLayout>
