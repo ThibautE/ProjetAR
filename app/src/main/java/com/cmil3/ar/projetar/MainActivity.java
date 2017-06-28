@@ -10,6 +10,10 @@ import android.location.LocationProvider;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -28,13 +32,42 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     private double altitude = 0;
     private float accuracy;
 
+
+    //initiate tool bar with buttons and actions
+    private void initToolbar() {
+        Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
+        toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.action_main:
+                        break;
+                    case R.id.action_carte:
+                        Intent carte = new Intent(MainActivity.this, Carte.class);
+                        startActivity(carte);
+                        break;
+                    case R.id.action_addPoi:
+                        Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
+                        startActivity(addPoi);
+                        break;
+                    case R.id.action_calendar:
+                        Intent calen = new Intent(MainActivity.this, Calendar.class);
+                        startActivity(calen);
+                        break;
+                }
+                return true;
+            }
+        });
+        // Inflate a menu to be displayed in the toolbar
+        toolbarBottom.inflateMenu(R.menu.menumain);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // instanciation du button pour la liste et la carte
-        buttonFonction();
+        initToolbar();
 
         this.architectView = (ArchitectView) this.findViewById(R.id.architectView);
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
@@ -151,39 +184,5 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     public void onProviderDisabled(String provider) {
         String msg = String.format(getResources().getString(R.string.provider_disabled), provider);
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
-
-    //Instanciation des boutons
-    private void buttonFonction() {
-        Button BCarte = (Button) findViewById(R.id.button2); //création d'un boutton actif sur le bouton button4 du layout activity_main
-        Button BCalendar = (Button) findViewById(R.id.button4); //création d'un boutton actif sur le bouton button4 du layout activity_main
-        Button BAddPoi = (Button) findViewById(R.id.button5); //création d'un boutton actif sur le bouton button4 du layout activity_main
-
-
-        BCarte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent carte = new Intent(MainActivity.this, Carte.class);
-
-                startActivity(carte);
-            }
-        });
-
-        BCalendar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent calen = new Intent(MainActivity.this, Calendar.class);
-
-                startActivity(calen);
-            }
-        });
-
-        BAddPoi.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
-                startActivity(addPoi);
-            }
-        });
     }
 }

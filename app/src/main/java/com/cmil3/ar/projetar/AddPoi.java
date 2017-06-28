@@ -9,6 +9,8 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.EditText;
@@ -61,12 +63,42 @@ public class AddPoi extends Activity implements LocationListener {
         }
     }
 
+    //initiate tool bar with buttons and actions
+    private void initToolbar() {
+        Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
+        toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.action_main:
+                        Intent addPoi = new Intent(AddPoi.this, MainActivity.class);
+                        startActivity(addPoi);
+                        break;
+                    case R.id.action_carte:
+                        Intent carte = new Intent(AddPoi.this, Carte.class);
+                        startActivity(carte);
+                        break;
+                    case R.id.action_addPoi:
+                        break;
+                    case R.id.action_calendar:
+                        Intent calen = new Intent(AddPoi.this, Calendar.class);
+                        startActivity(calen);
+                        break;
+                }
+                return true;
+            }
+        });
+        // Inflate a menu to be displayed in the toolbar
+        toolbarBottom.inflateMenu(R.menu.menumain);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_note);
 
+        initToolbar();
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.cmil3.ar.projetar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -21,7 +22,9 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,6 +48,37 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
     ArrayList<String[]> poiList = new ArrayList<>();
 
 
+
+    //initiate tool bar with buttons and actions
+    private void initToolbar() {
+        Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
+        toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.action_main:
+                        Intent main = new Intent(Carte.this, MainActivity.class);
+                        startActivity(main);
+                        break;
+                    case R.id.action_carte:
+                        break;
+                    case R.id.action_addPoi:
+                        Intent addPoi = new Intent(Carte.this, AddPoi.class);
+                        startActivity(addPoi);
+                        break;
+                    case R.id.action_calendar:
+                        Intent calen = new Intent(Carte.this, Calendar.class);
+                        startActivity(calen);
+                        break;
+                }
+                return true;
+            }
+        });
+        // Inflate a menu to be displayed in the toolbar
+        toolbarBottom.inflateMenu(R.menu.menumain);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,8 +88,13 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //init menu toolbar
+        initToolbar();
+
         //get poi from http://www.lirmm.fr/campusar/poiFile.json
         new GetPoi().execute();
+
+
     }
 
 
@@ -157,7 +196,7 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
         for(String[] s: poiList){
             if(s[3].indexOf("Note")==0){ // if description begin with "note" i.e communautary POI
                 //display marker with low opacity ( alpha O.8) and a different color (purple)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]).alpha(0.8f).icon(BitmapDescriptorFactory.defaultMarker(225)));
+                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]).alpha(0.5f).icon(BitmapDescriptorFactory.defaultMarker(225)));
             } else {
                 //else display marker with default options
                 mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
