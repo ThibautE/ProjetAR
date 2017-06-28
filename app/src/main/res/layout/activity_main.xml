@@ -40,6 +40,7 @@
             android:layout_marginBottom="40dp"
             android:text="@string/addPoi"
             android:textSize="15sp" />
+
     </com.wikitude.architect.ArchitectView>
 
 </RelativeLayout>
