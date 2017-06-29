@@ -174,15 +174,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/thibaut/.android/build-cache/4cc471f861ce5be09b92f135973a3a8966c0341f/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5660c861d7a08660dc199def960d9b6a0cc84772/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/thibaut/.android/build-cache/2255be36e3db270967b15ff84b9cd1c5af9fe960/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -225,15 +216,6 @@
         revision="25.0.2"
         sha1="652f51abc06a99243ca9399c13af2c6c0769c277">
         <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ada8e0a61f2c87853a84abe102b915bf83a52b72/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/thibaut/.android/build-cache/eecd0dd09b2c1429f71fd048774c1ec21747c75d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_01438ac0864ccf4727c937c893b563a57eb2a40e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -324,15 +306,6 @@
         revision="25.0.2"
         sha1="5bd38c72db0a3b4140d38b7fb527e78e46126d79">
         <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_334e961b9b21772ad9598ed8163f973317c987bd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/thibaut/.android/build-cache/08c74ba10fd7aaf02088a8f5e7b6ca8319f07a7a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="/home/thibaut/ProjetAR/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_162b75ee7c06da9455618c4a5b5fddb82cb4a106/classes.dex" />
     </item>
     <item
         is-multidex="true"

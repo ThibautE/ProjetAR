@@ -22,8 +22,11 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right"
+            android:layout_marginBottom="90dp"
+            android:layout_marginRight="-95dp"
             android:background="?attr/colorPrimary"
             android:elevation="15dp"
+            android:rotation="270"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 

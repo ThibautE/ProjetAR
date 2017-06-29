@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_main"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/main"
+        android:icon="@drawable/ic_camera_rotate"
+        />
+
+    <item
+        android:id="@+id/action_carte"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/carte"
+        android:icon="@drawable/ic_map_rotate"
+        />
+
+    <item
+        android:id="@+id/action_addPoi"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/addPoi"
+        android:icon="@drawable/ic_addpoi"
+        />
+
+    <item
+        android:id="@+id/action_calendar"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/agenda"
+        android:icon="@drawable/ic_calendar_rotate"
+        />
+
+</menu>

@@ -44,9 +44,6 @@ dependencies {
     compile 'pub.devrel:easypermissions:0.2.1'
     compile('com.google.api-client:google-api-client-android:1.22.0') { exclude group: 'org.apache.httpcomponents' }
     compile('com.google.apis:google-api-services-calendar:v3-rev249-1.22.0') { exclude group: 'org.apache.httpcomponents' }
-
-    //bottom nav
-    compile 'com.android.support:design:25.0.0'
 }
 
 

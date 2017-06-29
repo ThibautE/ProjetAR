@@ -5,36 +5,36 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:scrollbars="vertical">
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/TextViewTitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Ajoutez une note de signalement temporaire sur votre position:"
-            android:textSize="10pt">
-        </TextView>
+            android:textSize="10pt"></TextView>
 
         <EditText
             android:id="@+id/EditTextName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"
             android:hint="Nom de la note"
-            android:inputType="textPersonName"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"></EditText>
+            android:inputType="textPersonName"></EditText>
 
         <EditText
             android:id="@+id/EditTextDesc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"
             android:hint="Description de la note"
             android:inputType="textMultiLine"
-            android:lines="5"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"></EditText>
+            android:lines="5"></EditText>
 
         <Button
             android:id="@+id/ButtonCreateNote"
@@ -48,8 +48,7 @@
             android:id="@+id/TextViewInfo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="*Certains caractères ne sont pas autorisés et n'apparaitrons pas."
-            ></TextView>
+            android:text="*Certains caractères ne sont pas autorisés et n'apparaitrons pas."></TextView>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/menuToolbar"

@@ -11,7 +11,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
     import android.net.Uri;
     import android.os.AsyncTask;
-import android.os.Bundle;
+    import android.os.Build;
+    import android.os.Bundle;
 import android.support.annotation.NonNull;
     import android.support.v7.widget.Toolbar;
     import android.text.Html;
@@ -49,6 +50,13 @@ import java.util.List;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
+    import static android.R.attr.colorPrimary;
+    import static android.R.attr.id;
+    import static android.R.style.Theme;
+    import static com.cmil3.ar.projetar.R.id.bottom;
+    import static com.cmil3.ar.projetar.R.id.menuToolbar;
+    import static com.cmil3.ar.projetar.R.id.wrap_content;
+
     public class Calendar extends Activity
             implements EasyPermissions.PermissionCallbacks {
         GoogleAccountCredential mCredential;
@@ -56,6 +64,7 @@ import pub.devrel.easypermissions.EasyPermissions;
         private Button buttonENT;
         private Button buttonUM;
         ProgressDialog mProgress;
+        private Toolbar menu;
 
         static final int REQUEST_ACCOUNT_PICKER = 1000;
         static final int REQUEST_AUTHORIZATION = 1001;
@@ -64,6 +73,37 @@ import pub.devrel.easypermissions.EasyPermissions;
 
         private static final String PREF_ACCOUNT_NAME = "accountName";
         private static final String[] SCOPES = { CalendarScopes.CALENDAR_READONLY };
+
+
+        //initiate tool bar with buttons and actions
+        private void initToolbar() {
+            Toolbar toolbarBottom = menu;
+                toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_main:
+                                Intent calen = new Intent(Calendar.this, MainActivity.class);
+                                startActivity(calen);
+                                break;
+                            case R.id.action_carte:
+                                Intent carte = new Intent(Calendar.this, Carte.class);
+                                startActivity(carte);
+                                break;
+                            case R.id.action_addPoi:
+                                Intent addPoi = new Intent(Calendar.this, AddPoi.class);
+                                startActivity(addPoi);
+                                break;
+                            case R.id.action_calendar:
+                                break;
+                        }
+                        return true;
+                    }
+                });
+                // Inflate a menu to be displayed in the toolbar
+                toolbarBottom.inflateMenu(R.menu.menumain);
+        }
+
 
 
         /**
@@ -94,7 +134,6 @@ import pub.devrel.easypermissions.EasyPermissions;
             mOutputText.setMovementMethod(new ScrollingMovementMethod());
             mOutputText.setText(
                     "Sélectionnez le compte Google associé à votre agenda.");
-            activityLayout.addView(mOutputText);
 
 
             mProgress = new ProgressDialog(this);
@@ -115,7 +154,6 @@ import pub.devrel.easypermissions.EasyPermissions;
                         startActivity(intent);
                 }
             });
-            activityLayout.addView(buttonENT);
 
             //UM
             buttonUM = new Button(this);
@@ -130,8 +168,23 @@ import pub.devrel.easypermissions.EasyPermissions;
                     startActivity(intent);
                 }
             });
-            activityLayout.addView(buttonUM);
             /////////////////////////////////////////////////////////////////////////
+
+            ///////////////////////////////Ajout du menu
+            menu = new Toolbar(this);
+            menu.setId(id/menuToolbar);
+            menu.setMinimumWidth(wrap_content);
+            menu.setMinimumHeight(wrap_content);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {menu.setForegroundGravity(bottom);}
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {menu.setElevation(15);}
+
+            /////////////////////////////////////////////////////////////////////////
+
+            initToolbar();
+            activityLayout.addView(mOutputText);
+            activityLayout.addView(buttonENT);
+            activityLayout.addView(buttonUM);
+            activityLayout.addView(menu);
 
             setContentView(activityLayout);
 
