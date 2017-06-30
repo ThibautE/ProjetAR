@@ -23,7 +23,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_'"
             android:hint="Nom de la note"
             android:inputType="textPersonName"></EditText>
 
@@ -31,7 +31,7 @@
             android:id="@+id/EditTextDesc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_'"
             android:hint="Description de la note"
             android:inputType="textMultiLine"
             android:lines="5"></EditText>

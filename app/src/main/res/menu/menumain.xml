@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Icons made by “madebyolivier” from www.flaticon.com -->
     <item
         android:id="@+id/action_main"
         android:orderInCategory="100"

@@ -9,20 +9,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-    import android.net.Uri;
-    import android.os.AsyncTask;
-    import android.os.Build;
-    import android.os.Bundle;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-    import android.support.v7.widget.Toolbar;
-    import android.text.Html;
-    import android.text.TextUtils;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
-    import android.view.MenuItem;
-    import android.view.View;
-    import android.view.ViewGroup;
-    import android.widget.Button;
-    import android.widget.LinearLayout;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -50,15 +50,12 @@ import java.util.List;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
-    import static android.R.attr.colorPrimary;
-    import static android.R.attr.id;
-    import static android.R.style.Theme;
-    import static com.cmil3.ar.projetar.R.id.bottom;
-    import static com.cmil3.ar.projetar.R.id.menuToolbar;
-    import static com.cmil3.ar.projetar.R.id.wrap_content;
+import static android.R.attr.id;
+import static com.cmil3.ar.projetar.R.id.bottom;
+import static com.cmil3.ar.projetar.R.id.menuToolbar;
+import static com.cmil3.ar.projetar.R.id.wrap_content;
 
-    public class Calendar extends Activity
-            implements EasyPermissions.PermissionCallbacks {
+    public class Calendar extends Activity implements EasyPermissions.PermissionCallbacks {
         GoogleAccountCredential mCredential;
         private TextView mOutputText;
         private Button buttonENT;
@@ -103,7 +100,6 @@ import pub.devrel.easypermissions.EasyPermissions;
                 // Inflate a menu to be displayed in the toolbar
                 toolbarBottom.inflateMenu(R.menu.menumain);
         }
-
 
 
         /**
@@ -268,7 +264,8 @@ import pub.devrel.easypermissions.EasyPermissions;
             switch(requestCode) {
                 case REQUEST_GOOGLE_PLAY_SERVICES:
                     if (resultCode != RESULT_OK) {
-                        mOutputText.setText( "Cette application nécessite l'installation de Google Play. Installez la dernière version de Google Play puis relancez l'application.");
+                        mOutputText.setText( "Cette application nécessite l'installation de Google Play. " +
+                                "Installez la dernière version de Google Play puis relancez l'application.");
                     } else {
                         getResultsFromApi();
                     }
