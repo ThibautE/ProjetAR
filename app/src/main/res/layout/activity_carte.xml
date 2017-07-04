@@ -20,6 +20,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|right"
+        android:layout_marginLeft="-20dp"
         android:background="?attr/colorPrimary"
         android:elevation="15dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"

@@ -91,6 +91,11 @@ import static com.cmil3.ar.projetar.R.id.wrap_content;
                                 Intent addPoi = new Intent(Calendar.this, AddPoi.class);
                                 startActivity(addPoi);
                                 break;
+                            case R.id.action_galerie:
+                                Uri gal = Uri.parse("http://www.lirmm.fr/campusar/galerie/");
+                                Intent intent_gal = new Intent(Intent.ACTION_VIEW, gal);
+                                startActivity(intent_gal);
+                                break;
                             case R.id.action_calendar:
                                 break;
                         }

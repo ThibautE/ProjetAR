@@ -28,6 +28,14 @@
         />
 
     <item
+        android:id="@+id/action_galerie"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/galerie"
+        android:icon="@drawable/ic_galerie"
+        />
+
+    <item
         android:id="@+id/action_calendar"
         android:orderInCategory="100"
         app:showAsAction="always"

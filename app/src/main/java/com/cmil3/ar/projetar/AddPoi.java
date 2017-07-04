@@ -80,6 +80,11 @@ public class AddPoi extends Activity implements LocationListener {
                         break;
                     case R.id.action_addPoi:
                         break;
+                    case R.id.action_galerie:
+                        Uri gal = Uri.parse("http://www.lirmm.fr/campusar/galerie/");
+                        Intent intent_gal = new Intent(Intent.ACTION_VIEW, gal);
+                        startActivity(intent_gal);
+                        break;
                     case R.id.action_calendar:
                         Intent calen = new Intent(AddPoi.this, Calendar.class);
                         startActivity(calen);

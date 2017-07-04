@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -65,6 +66,11 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                     case R.id.action_addPoi:
                         Intent addPoi = new Intent(Carte.this, AddPoi.class);
                         startActivity(addPoi);
+                        break;
+                    case R.id.action_galerie:
+                        Uri gal = Uri.parse("http://www.lirmm.fr/campusar/galerie/");
+                        Intent intent_gal = new Intent(Intent.ACTION_VIEW, gal);
+                        startActivity(intent_gal);
                         break;
                     case R.id.action_calendar:
                         Intent calen = new Intent(Carte.this, Calendar.class);

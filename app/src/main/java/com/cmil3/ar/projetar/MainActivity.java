@@ -7,11 +7,13 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.LocationProvider;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.wikitude.architect.ArchitectStartupConfiguration;
@@ -45,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                     case R.id.action_addPoi:
                         Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
                         startActivity(addPoi);
+                        break;
+                    case R.id.action_galerie:
+                        Uri gal = Uri.parse("http://www.lirmm.fr/campusar/galerie/");
+                        Intent intent_gal = new Intent(Intent.ACTION_VIEW, gal);
+                        startActivity(intent_gal);
                         break;
                     case R.id.action_calendar:
                         Intent calen = new Intent(MainActivity.this, Calendar.class);
