@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -47,6 +48,8 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
 
     //array list which will contain all the poi to display on map
     ArrayList<String[]> poiList = new ArrayList<>();
+
+    Boolean semaphore = false; //needed to wait for POI to be loaded before creating markers
 
 
 
@@ -126,42 +129,43 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
         @Override
         protected Void doInBackground(Void... arg0) {
             HttpHandler sh = new HttpHandler();
-            // Making a request to url http://www.lirmm.fr/campusar/poiFile.json and getting response
+            // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url);
+            Log.i("----------> String ", jsonStr);
 
             if (jsonStr != null) {
-                try {
-                    JSONArray jsonArr = new JSONArray(jsonStr);
+                    try {
+                        JSONArray jsonArr = new JSONArray(jsonStr);
 
-                    // looping through all poi
-                    for (int i = 0; i < jsonArr.length(); i++) {
-                        JSONObject c = jsonArr.getJSONObject(i);
-
-                        //create a tab with the poi data
-                        String[] obj={c.getString("name"), c.getString("latitude"), c.getString("longitude"), c.getString("description") };
-                        //store the tab into arrayList
-                        poiList.add(obj);
-
-
-                    }
-                } catch (final JSONException e) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getApplicationContext(),
-                                    "Json parsing error: " + e.getMessage(),
-                                    Toast.LENGTH_LONG)
-                                    .show();
+                        // looping through all poi
+                        for (int i = 0; i < jsonArr.length(); i++) {
+                            JSONObject c = jsonArr.getJSONObject(i);
+                            //create POI and add it to the arraylist
+                            String[] obj = {c.getString("name"), c.getString("latitude"), c.getString("longitude"), c.getString("description")};
+                            poiList.add(obj);
                         }
-                    });
-
-                }
+                        semaphore=true; //POI OK so markers can be created
+                        Log.d("IDK", "----------> Loop POI faite");
+                    } catch (final JSONException e) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),
+                                        "Json parsing error: " + e.getMessage(),
+                                        Toast.LENGTH_LONG)
+                                        .show();
+                            }
+                        });
+                    }
             } else {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        //create a POI to tell there's an error
+                        String[] obj={"Erreur", "43.632551", "3.864649", "L'application n'a pas réussi à trouver les points d'intérêts. :(" };
+                        poiList.add(obj);
                         Toast.makeText(getApplicationContext(),
-                                "Couldn't get json from server. Check LogCat for possible errors!",
+                                "L'application n'a pas réussi à retrouver les points d'intérêts.",
                                 Toast.LENGTH_LONG)
                                 .show();
                     }
@@ -196,19 +200,7 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         GoogleMap mMap = googleMap;
-
-
-        //adding poi from the array to the map
-        for(String[] s: poiList){
-            if(s[3].indexOf("Note")==0){ // if description begin with "note" i.e communautary POI
-                //display marker with low opacity ( alpha O.8) and a different color (purple)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]).alpha(0.5f).icon(BitmapDescriptorFactory.defaultMarker(225)));
-            } else {
-                //else display marker with default options
-                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
-
-            }
-        }
+        Log.d("IDK", "----------> Google Maps appelé");
 
 
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
@@ -239,6 +231,9 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
                 return info;
             }
         });
+
+        Log.d("IDK", "---------->  Vraiment apres");
+
 
         //déplacement de la caméra sur la carte au niveau de la fds
         LatLng fds = new LatLng(43.632057, 3.864793);
@@ -275,5 +270,29 @@ public class Carte extends FragmentActivity implements OnMapReadyCallback {
             return;
         }
         mMap.setMyLocationEnabled(true);
+
+        while(true){ //pause to check
+            if(semaphore==true){ //if POI loaded
+                break; //continue code
+            }
+        }
+
+        //adding poi from the array to the map
+        for(String[] s: poiList){
+            Log.d("IDK", "----------> Pour chaque POI appelé");
+
+            if(s[3].indexOf("Note")==0){ // if description begin with "note" i.e communautary POI
+                //display marker with low opacity ( alpha O.8) and a different color (purple)
+                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]).alpha(0.7f).icon(BitmapDescriptorFactory.defaultMarker(225)));
+            } else {
+                Log.d("IDK", "----------> Marqueur va etre créé");
+
+                //else display marker with default options
+                mMap.addMarker(new MarkerOptions().position(new LatLng(valueOf(s[1]), valueOf(s[2]))).title(s[0]).snippet(s[3]));
+
+            }
+        }
+
+        Log.d("IDK", "---------->  POur chaque POI est passé...");
     }
 }
